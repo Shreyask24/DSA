@@ -2,8 +2,6 @@
 
 ---
 
-## 🔍 Search Element in Array
-
 Searches for a given number in the array and returns its index if found, otherwise returns `-1`.
 
 ```js
