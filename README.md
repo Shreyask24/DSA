@@ -243,3 +243,34 @@ console.log(countDigits(n))
 ```
 
 
+Anagram
+```js
+function areAnagrams(s1, s2) {
+    // code here
+    if (s1.length !== s2.length) return false;
+
+    let freq = {};
+
+    for (let i = 0; i < s1.length; i++) {
+        let ch = s1[i];
+        if (freq[ch] === undefined) {
+            freq[ch] = 1;
+        } else {
+            freq[ch]++;
+        }
+    }
+
+    for (let j = 0; j < s2.length; j++) {
+        let ch = s2[j];
+        if (freq[ch] === undefined || freq[ch] === 0) {
+            return false;
+        } else {
+            freq[ch]--;
+        }
+    }
+
+    return true;
+}
+
+console.log(areAnagrams("shreyas", "sayerhs"))
+```
