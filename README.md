@@ -220,4 +220,20 @@ for (let i = 0; i < n; i++) {
 }
 ```
 
+Write a function that returns the count of digits in a number
+```js
+function countDigits(n) {
+    let count = 0
+    while (n > 0) {
+        n = Math.floor(n / 10)
+        count++
+    }
+    return count
+}
+
+let n = 655754
+
+console.log(countDigits(n))
+```
+
 
