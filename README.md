@@ -223,6 +223,12 @@ for (let i = 0; i < n; i++) {
 Write a function that returns the count of digits in a number
 ```js
 function countDigits(n) {
+    // handling 0
+    if (n == 0) return 1;
+
+    // handling negative numbers
+    n = Math.abs(n)
+
     let count = 0
     while (n > 0) {
         n = Math.floor(n / 10)
@@ -231,7 +237,7 @@ function countDigits(n) {
     return count
 }
 
-let n = 655754
+let n = -41654
 
 console.log(countDigits(n))
 ```
