@@ -274,3 +274,33 @@ function areAnagrams(s1, s2) {
 
 console.log(areAnagrams("shreyas", "sayerhs"))
 ```
+
+Find the majority element in the array. If no majority element exists, return -1.
+```js
+function majorityElement(arr) {
+    // code here
+    let n = arr.length;
+    let freq = {};  // frequency map
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+
+        // If not seen before, initialize count
+        if (freq[num] === undefined) {
+            freq[num] = 1;
+        } else {
+            freq[num]++;
+        }
+
+        // Check if it crossed majority threshold
+        if (freq[num] > Math.floor(n / 2)) {
+            return num;
+        }
+    }
+
+    return -1;  // No majority element found
+}
+
+let arr = [3, 1, 3, 3, 2]
+console.log(majorityElement(arr))
+```
