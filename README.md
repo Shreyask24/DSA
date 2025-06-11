@@ -365,3 +365,51 @@ function getMiddle(node) {
 
 }
 ```
+
+# Spirally traversing a matrix
+
+You are given a rectangular matrix mat[][] of size n x m, and your task is to return an array while traversing the matrix in spiral form.
+
+```js
+function spirallyTraverse(mat) {
+    const n = mat.length;
+    const m = mat[0].length;
+
+    const result = [];
+
+    let top = 0, bottom = n - 1;
+    let left = 0, right = m - 1;
+
+    while (top <= bottom && left <= right) {
+        // Traverse top row (left to right)
+        for (let i = left; i <= right; i++) {
+            result.push(mat[top][i]);
+        }
+        top++;
+
+        // Traverse right column (top to bottom)
+        for (let i = top; i <= bottom; i++) {
+            result.push(mat[i][right]);
+        }
+        right--;
+
+        // Traverse bottom row (right to left)
+        if (top <= bottom) {
+            for (let i = right; i >= left; i--) {
+                result.push(mat[bottom][i]);
+            }
+            bottom--;
+        }
+
+        // Traverse left column (bottom to top)
+        if (left <= right) {
+            for (let i = bottom; i >= top; i--) {
+                result.push(mat[i][left]);
+            }
+            left++;
+        }
+    }
+
+    return result;
+}
+```
