@@ -322,3 +322,26 @@ function upperCaseConversion(s) {
 
 console.log(upperCaseConversion("shreyas kallurkar"))
 ```
+
+Given an array, arr[]. Sort the array using Bubble Sort Algorithm.
+```js
+function bubbleSort(arr) {
+    let n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        // Loop to compare adjacent elements
+        for (let j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap if elements are out of order
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    return arr;
+}
+
+console.log(bubbleSort([4, 1, 3, 9, 7]))
+```
