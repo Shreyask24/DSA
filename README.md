@@ -345,3 +345,23 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort([4, 1, 3, 9, 7]))
 ```
+
+# Linked List
+
+Middle of Linked List: Given the head of a linked list, the task is to find the middle
+```js
+function getMiddle(node) {
+    if (!node) return -1;
+
+    let slow = node;
+    let fast = node;
+
+    while (fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    return slow.data;
+
+}
+```
