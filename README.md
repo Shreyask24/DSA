@@ -304,3 +304,21 @@ function majorityElement(arr) {
 let arr = [3, 1, 3, 3, 2]
 console.log(majorityElement(arr))
 ```
+
+Given a string s, convert the first letter of each word in the string to uppercase. 
+```js
+function upperCaseConversion(s) {
+    let result = ""
+
+    for (let i = 0; i < s.length; i++) {
+        if (i === 0 || s[i - 1] === ' ') {
+            result += s[i].toUpperCase()
+        } else {
+            result += s[i]
+        }
+    }
+    return result
+}
+
+console.log(upperCaseConversion("shreyas kallurkar"))
+```
