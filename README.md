@@ -435,8 +435,9 @@ function spirallyTraverse(mat) {
 }
 ```
 
-# Given an array of integers values and an integer k, perform the following operations:
+# Median from k Smallest and Largest Elements
 
+Given an array of integers values and an integer k, perform the following operations:
 - Find the k smallest numbers from the array.
 - Find the k largest numbers from the array.
 - Compute the median of the k smallest numbers.
@@ -474,4 +475,40 @@ function getMedian(arr, k) {
 
 
 console.log(medians([1, 2, 3, 5, 8, 6], 4))
+```
+
+# Maximum Pages Printed under Concurrent Printer Constraints
+```js
+function getPages(pages, threshold) {
+    const n = pages.length;
+    const printers = [];
+
+    for (let i = 0; i < n; i++) {
+        printers.push({ pages: pages[i], threshold: threshold[i] });
+    }
+
+    // Sort by threshold descending, then pages descending
+    printers.sort((a, b) => {
+        if (a.threshold === b.threshold) {
+            return b.pages - a.pages;
+        }
+        return b.threshold - a.threshold;
+    });
+
+    let totalPages = 0;
+    let active = [];
+
+    for (let i = 0; i < n; i++) {
+        active.push(printers[i]); // Activate
+        totalPages += printers[i].pages; // Let it print
+
+        // After printing, suspend printers whose threshold < current count
+        const count = active.length;
+        active = active.filter(p => p.threshold >= count);
+    }
+
+    return totalPages;
+}
+
+console.log(getPages([10, 20, 30], [1, 2, 3]))
 ```
