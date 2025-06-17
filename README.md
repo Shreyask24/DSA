@@ -242,6 +242,27 @@ let n = -41654
 console.log(countDigits(n))
 ```
 
+Palindrome
+
+```js
+function palindrome(num) {
+    if (num < 0) return false
+
+    let numCopy = num
+    let rev = 0
+
+    while (num > 0) {
+        let rem = num % 10
+        rev = (10 * rev) + rem
+        num = Math.floor(num / 10)
+    }
+
+    return rev === numCopy
+}
+
+console.log(palindrome(121))
+```
+
 
 Anagram
 ```js
