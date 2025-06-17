@@ -413,3 +413,44 @@ function spirallyTraverse(mat) {
     return result;
 }
 ```
+
+# Given an array of integers values and an integer k, perform the following operations:
+
+- Find the k smallest numbers from the array.
+- Find the k largest numbers from the array.
+- Compute the median of the k smallest numbers.
+- Compute the median of the k largest numbers.
+- If k is odd, take the middle value.
+- If k is even, take the lower median (i.e., the left one of the two middle values).
+
+- Return an array where:
+- The first element is the median of the k largest numbers
+- The second element is the median of the k smallest numbers
+
+```js
+function medians(values, k) {
+    values.sort((a, b) => a - b); // sort ascending
+
+    // Pick k smallest → minMedian
+    const smallestK = values.slice(0, k);
+    const minMedian = getMedian(smallestK, k);
+
+    // Pick k largest → maxMedian
+    const largestK = values.slice(values.length - k);
+    const maxMedian = getMedian(largestK, k);
+
+    return [maxMedian, minMedian];
+}
+
+// Helper to return median from a sorted array
+function getMedian(arr, k) {
+    if (k % 2 === 1) {
+        return arr[Math.floor(k / 2)];
+    } else {
+        return arr[Math.floor(k / 2) - 1]; // as per problem, use lower median
+    }
+}
+
+
+console.log(medians([1, 2, 3, 5, 8, 6], 4))
+```
