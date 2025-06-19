@@ -289,6 +289,11 @@ function reverse(x) {
 console.log(reverse(123))
 ```
 
+# Time Complexity is used to measure efficiecny of algorithm in terms of speed, **as input size grows/increases**
+
+# Common Time Complexity
+## O(1) > O(log n) > O(n) > O(n log n) > O(n<sup>2</sup>) > O(2<sup>n</sup>) > o(n!)
+
 Anagram
 ```js
 function areAnagrams(s1, s2) {
