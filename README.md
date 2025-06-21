@@ -2,7 +2,7 @@
 
 ---
 
-Searches for a given number in the array and returns its index if found, otherwise returns `-1`.
+## Searches for a given number in the array and returns its index if found, otherwise returns `-1`.
 
 ```js
 let arr = [4, 2, -80, -57, 0, 10, 30, 50, 50, 0, -5, -6, -3, -20]
@@ -19,7 +19,7 @@ function searchIndex(num) {
 console.log(searchIndex(2));
 ```
 
-Find All Negative Numbers
+## Find All Negative Numbers
 
 ```js
 let arr = [4, 2, -80, -57, 0, 10, 30, 50, 50, 0, -5, -6, -3, -20]
@@ -37,7 +37,7 @@ function searchNegativeNum(arr) {
 console.log(searchNegativeNum(arr));
 ```
 
-Find the Largest Element
+## Find the Largest Element
 
 ```js
 let arr = [4, 2, -80, -57, 0, 10, 30, 50, 50, 0, -5, -6, -3, -20]
@@ -55,7 +55,7 @@ function largestNum(arr) {
 console.log(largestNum(arr));
 ```
 
-Find the Second Largest Element
+## Find the Second Largest Element
 
 ```js
 let arr = [4, 2, -80, -57, 0, 10, 30, 50, 50, 0, -5, -6, -3, -20]
@@ -80,7 +80,7 @@ console.log(secondLargest(arr));
 ```
 
 
-# 🔁 Loop in loop in JavaScript - Practice Examples
+# 🔁 Nested Loop in JavaScript - Practice Examples
 ![image](https://github.com/user-attachments/assets/2d39139d-cf94-43e3-aac2-2d116c38e98c)
 
 ```js
@@ -220,7 +220,7 @@ for (let i = 0; i < n; i++) {
 }
 ```
 
-Write a function that returns the count of digits in a number
+## Write a function that returns the count of digits in a number
 ```js
 function countDigits(n) {
     // handling 0
@@ -242,7 +242,7 @@ let n = -41654
 console.log(countDigits(n))
 ```
 
-Palindrome
+## Palindrome
 
 ```js
 function palindrome(num) {
@@ -263,7 +263,7 @@ function palindrome(num) {
 console.log(palindrome(121))
 ```
 
-Reverse Integer
+## Reverse Integer
 ```js
 function reverse(x) {
     let xCopy = x
@@ -317,7 +317,7 @@ function removeDuplicates(nums) {
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
 ```
 
-Anagram
+## Anagram
 ```js
 function areAnagrams(s1, s2) {
     // code here
@@ -349,7 +349,7 @@ function areAnagrams(s1, s2) {
 console.log(areAnagrams("shreyas", "sayerhs"))
 ```
 
-Find the majority element in the array. If no majority element exists, return -1.
+## Find the majority element in the array. If no majority element exists, return -1.
 ```js
 function majorityElement(arr) {
     // code here
@@ -379,7 +379,7 @@ let arr = [3, 1, 3, 3, 2]
 console.log(majorityElement(arr))
 ```
 
-Given a string s, convert the first letter of each word in the string to uppercase. 
+## Given a string s, convert the first letter of each word in the string to uppercase. 
 ```js
 function upperCaseConversion(s) {
     let result = ""
@@ -397,7 +397,7 @@ function upperCaseConversion(s) {
 console.log(upperCaseConversion("shreyas kallurkar"))
 ```
 
-Given an array, arr[]. Sort the array using Bubble Sort Algorithm.
+## Given an array, arr[]. Sort the array using Bubble Sort Algorithm.
 ```js
 function bubbleSort(arr) {
     let n = arr.length;
@@ -422,7 +422,7 @@ console.log(bubbleSort([4, 1, 3, 9, 7]))
 
 # Linked List
 
-Middle of Linked List: Given the head of a linked list, the task is to find the middle
+## Middle of Linked List: Given the head of a linked list, the task is to find the middle
 ```js
 function getMiddle(node) {
     if (!node) return -1;
@@ -442,7 +442,7 @@ function getMiddle(node) {
 
 # Spirally traversing a matrix
 
-You are given a rectangular matrix mat[][] of size n x m, and your task is to return an array while traversing the matrix in spiral form.
+## You are given a rectangular matrix mat[][] of size n x m, and your task is to return an array while traversing the matrix in spiral form.
 
 ```js
 function spirallyTraverse(mat) {
@@ -530,7 +530,7 @@ function getMedian(arr, k) {
 console.log(medians([1, 2, 3, 5, 8, 6], 4))
 ```
 
-# Maximum Pages Printed under Concurrent Printer Constraints
+## Maximum Pages Printed under Concurrent Printer Constraints
 ```js
 function getPages(pages, threshold) {
     const n = pages.length;
