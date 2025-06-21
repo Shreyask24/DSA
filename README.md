@@ -1,7 +1,3 @@
-# 🔁 Loops in JavaScript - Practice Examples
-
----
-
 ## Searches for a given number in the array and returns its index if found, otherwise returns `-1`.
 
 ```js
@@ -79,8 +75,6 @@ function secondLargest(arr) {
 console.log(secondLargest(arr));
 ```
 
-
-# 🔁 Nested Loop in JavaScript - Practice Examples
 ![image](https://github.com/user-attachments/assets/2d39139d-cf94-43e3-aac2-2d116c38e98c)
 
 ```js
