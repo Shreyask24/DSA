@@ -289,10 +289,33 @@ function reverse(x) {
 console.log(reverse(123))
 ```
 
+---------------------------------------------------------------------
+
 # Time Complexity is used to measure efficiecny of algorithm in terms of speed, **as input size grows/increases**
 
 # Common Time Complexity
 ## O(1) > O(log n) > O(n) > O(n log n) > O(n<sup>2</sup>) > O(2<sup>n</sup>) > o(n!)
+
+---------------------------------------------------------------------
+
+# Remove Duplicates from Sorted Array
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
+
+```js
+function removeDuplicates(nums) {
+    let x = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[x] < nums[i]) {
+            x = x + 1
+            nums[x] = nums[i]
+        }
+    }
+    return x + 1
+};
+
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
+```
 
 Anagram
 ```js
