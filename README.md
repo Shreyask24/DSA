@@ -329,6 +329,20 @@ function removeElements(nums, val) {
 console.log(removeElements([0, 1, 2, 2, 3, 0, 4, 2], 2))
 ```
 
+## Reverse String
+```js
+function reverseString(str) {
+    let rev = ""
+
+    for (var i = str.length-1; i >=0 ; i--){
+      rev +=str[i]       
+    }
+    return rev
+}
+
+console.log(reverseString("Shreyas"))
+```
+
 ## Anagram
 ```js
 function areAnagrams(s1, s2) {
