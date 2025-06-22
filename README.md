@@ -310,6 +310,24 @@ function removeDuplicates(nums) {
 
 console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
 ```
+# Remove Element
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+
+```js
+function removeElements(nums, val) {
+    let x = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[x] = nums[i]
+            x = x + 1
+        }
+    }
+    return x
+};
+
+console.log(removeElements([0, 1, 2, 2, 3, 0, 4, 2], 2))
+```
 
 ## Anagram
 ```js
