@@ -342,6 +342,32 @@ function reverseString(str) {
 
 console.log(reverseString("Shreyas"))
 ```
+## Plus Minus
+Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+```js
+function plusMinus(arr) {
+    let negativeNum = 0;
+    let positiveNum = 0;
+    let zeros = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            zeros++;
+        } else if (arr[i] < 0) {
+            negativeNum++;
+        } else {
+            positiveNum++;
+        }
+    }
+
+    const total = arr.length;
+
+    console.log((positiveNum / total).toFixed(6));
+    console.log((negativeNum / total).toFixed(6));
+    console.log((zeros / total).toFixed(6));
+}
+```
 
 ## Anagram
 ```js
