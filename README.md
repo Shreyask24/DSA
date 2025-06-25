@@ -331,14 +331,16 @@ console.log(removeElements([0, 1, 2, 2, 3, 0, 4, 2], 2))
 
 ## Reverse String
 ```js
-function reverseString(str) {
-    let rev = ""
+function reverseString(s) {
+    let len = s.length
+    let halfLen = Math.floor(len / 2)
 
-    for (var i = str.length-1; i >=0 ; i--){
-      rev +=str[i]       
+     for(let i =0; i<halfLen ; i++){
+        let temp = s[i]
+        s[i] = s[len-1-i]
+        s[len-1-i] = temp
     }
-    return rev
-}
+};
 
 console.log(reverseString("Shreyas"))
 ```
