@@ -344,6 +344,22 @@ function reverseString(s) {
 
 console.log(reverseString("Shreyas"))
 ```
+
+## Given an mixed array, give sum of integers
+```js
+let arr = [10, 20, 'a', 'b', 'e', 50]
+let sum = 0
+
+for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === 'number') {
+    sum = sum + arr[i]
+  }
+
+}
+
+console.log(sum)
+```
+
 ## Plus Minus
 Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6 places after the decimal.
 
