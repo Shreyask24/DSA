@@ -345,6 +345,7 @@ function reverseString(s) {
 console.log(reverseString("Shreyas"))
 ```
 
+# Questions asked in interview
 ## Given an mixed array, give sum of integers
 ```js
 let arr = [10, 20, 'a', 'b', 'e', 50]
@@ -358,6 +359,32 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 console.log(sum)
+```
+
+## Given string return non-repeated characters from string
+```js
+let str = "swiss"
+let freq = {}
+
+for (let i = 0; i < str.length; i++) {
+  let char = str[i]
+
+  if (freq[char]) {
+    freq[char]++
+  } else {
+    freq[char] = 1
+  }
+}
+
+let result = []
+
+for (let i = 0; i < str.length; i++) {
+  if (freq[str[i]] === 1) {
+    result.push(str[i])
+  }
+}
+
+console.log(result.join(""))
 ```
 
 ## Plus Minus
